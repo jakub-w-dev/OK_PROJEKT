@@ -1,6 +1,6 @@
 from random import *
 
-class File_Handler:
+class FileHandler:
     @staticmethod
     def read_file(path):
         i = 0
@@ -18,11 +18,11 @@ class File_Handler:
     @staticmethod
     def write_to_file(path):
         output_file = open(path, 'w')
-        output_file.write(Input_Generator.generate_input())
+        output_file.write(InputGenerator.generate_input())
         output_file.close()
         return True
 
-class Input_Generator:
+class InputGenerator:
     @staticmethod
     def generate_input():
         machines = randrange(2, 10)

@@ -1,10 +1,15 @@
 from Utility.files import *
+from Models.data import *
 
 class Controller:
     @staticmethod
-    def file_input(path):
-        return File_Handler.read_file(path)
+    def load_input_file(path):
+        return FileHandler.read_file(path)
 
     @staticmethod
-    def file_output(path):
-        return File_Handler.write_to_file(path)
+    def save_generated_input(path):
+        return FileHandler.write_to_file(path)
+
+    @staticmethod
+    def run_greedy_algorithm(data):
+        return data.solve_greedy()
